@@ -8,12 +8,6 @@ class EmployeeRepository < BaseRepository
   end
 
   def find_by_username(username)
-    @elements.find do |element|
-      if element.username == username
-        true
-      else
-        false
-      end
-    end
+    @elements.find{|element| element.username == username }
   end
 end
